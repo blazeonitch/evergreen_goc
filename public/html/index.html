@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evergreen Group Of Companies</title>
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">Evergreen Group</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="landing">
+      <div class="landing-content">
+        <h1>Welcome to Evergreen</h1>
+        <p>Your sustainable future, built today.</p>
+      </div>
+    </div>
+
+    <div class="our-services" id="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card">Solar Panel Installation</div>
+        <div class="service-card">Renewable Consulting</div>
+        <div class="service-card">Energy Audits</div>
+        <div class="service-card">Smart Grids</div>
+      </div>
+    </div>
+
+    <div class="recent-works" id="projects">
+      <h2>Recent Projects</h2>
+      <div class="carousel" id="carousel">
+        <div class="slide">
+          <img
+            src="../src/images/solarHybrid-4dbba606.jpg"
+            alt="Home Solar Installation"
+          />
+          <p>Home Solar Installation</p>
+        </div>
+        <div class="slide">
+          <img
+            src="../src/images/health-center-solar-f2286da2.jpg"
+            alt="Solar Installation"
+          />
+          <p>Solar Installation</p>
+        </div>
+        <div class="slide">
+          <img
+            src="../src/images/boe-hole-f64331ca.jpg"
+            alt="Boe Hole Drilling"
+          />
+          <p>Boe Hole Drilling</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <h2>About Us</h2>
+      <p>
+        Evergreen Group is dedicated to providing sustainable energy solutions.
+      </p>
+    </div>
+
+    <div class="contact-us" id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" id="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <p>
+        © 2025 Evergreen Group. Website Made By
+        <a
+          href="https://github.com/blazeonitch/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blaze </a
+        >.
+      </p>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>

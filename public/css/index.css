@@ -1,0 +1,313 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f5f1;
+  color: #222;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Navbar */
+.navbar {
+  background: #0f3d0f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #a3d977;
+  outline: none;
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid #a3d977;
+  outline-offset: 2px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid #a3d977;
+  outline-offset: 2px;
+}
+
+/* Landing */
+.landing {
+  height: 90vh;
+  background: url("../src/images/solarHybrid-4dbba606.jpg") center/cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 8px black;
+  animation: fadeIn 2s ease-in;
+}
+
+.landing-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  animation: slideInDown 1s ease-in;
+}
+
+/* Sections */
+.our-services,
+.recent-works,
+.about,
+.contact-us {
+  padding: 4rem 2rem;
+}
+
+/* Service grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 61, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Carousel replaced by horizontal scroll snap */
+.carousel {
+  max-width: 90vw;
+  margin: 2rem auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 8px;
+  background: #f0f0f0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #0f3d0f #d0d0d0;
+}
+
+.slide {
+  scroll-snap-align: start;
+  flex: 0 0 80vw;
+  max-width: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.slides {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  display: block;
+}
+
+@media (hover: hover) {
+  .slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 61, 0, 0.3);
+  }
+}
+
+/* Scrollbar styles for WebKit */
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #0f3d0f;
+  border-radius: 4px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #d0d0d0;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 100px;
+  width: 100%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #8bc34a;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #a3d977;
+  outline-offset: 2px;
+  border-color: #a3d977;
+}
+
+button {
+  background: #0f3d0f;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+button:hover,
+button:focus-visible {
+  background: #196619;
+  outline: none;
+  outline-offset: 2px;
+  outline: 2px solid #a3d977;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #0f3d0f;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer {
+  background: #0f3d0f;
+  color: #a3d977;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  user-select: none;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 1rem;
+}
+
+.footer a {
+  color: #a3d977;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: #fff;
+  outline: none;
+}
