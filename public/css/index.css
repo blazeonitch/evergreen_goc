@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  user-select: none;
 }
 
 body {
@@ -20,6 +19,7 @@ h3 {
   font-weight: 700;
   line-height: 1.2;
 }
+
 
 /* Navbar */
 .navbar {
@@ -74,8 +74,7 @@ h3 {
 /* Landing */
 .landing {
   height: 90vh;
-  background: url("../images/solarHybrid-4dbba606.jpg") center/cover
-    no-repeat;
+  background: url("../images/20250719_152412_001.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +85,12 @@ h3 {
 }
 
 .landing-content h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 50rem);
+  animation: slideInDown 1s ease-in;
+}
+
+.landing-content p {
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
   animation: slideInDown 1s ease-in;
 }
 
@@ -284,6 +288,7 @@ button:focus-visible {
     transform: translateY(-50px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -294,6 +299,7 @@ button:focus-visible {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
