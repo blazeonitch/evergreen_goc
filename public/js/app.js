@@ -1,7 +1,28 @@
 const messageBox = document.getElementById("message");
 const nav = document.getElementById("navLinks");
 const hamburger = document.querySelector(".hamburger");
-const carousel = document.querySelector('.carousel'); // Make sure this matches your HTML
+const carousel = document.querySelector('.carousel'); 
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_56ad0hp';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
+
 
 // Auto-grow textarea height on input
 if (messageBox) {

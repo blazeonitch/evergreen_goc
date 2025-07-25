@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evergreen Group Of Companies</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="brand">Evergreen Group of Companies</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="landing">
+    <div class="landing-content">
+      <h1>Welcome to Evergreen Group Of Companies</h1>
+      <p>Your sustainable future, built today.</p>
+    </div>
+  </div>
+
+  <div class="our-services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">Solar Household Lighting systems</div>
+      <div class="service-card">Borehold Drilling & Solar Pumps</div>
+      <div class="service-card">Equipment Rental & Subcontracting</div>
+      <div class="service-card">Civil Work Projects</div>
+      <div class="service-card">General Delivery & Supply</div>
+      <div class="service-card">Catering And Pastry</div>
+    </div>
+  </div>
+
+  <div class="recent-works" id="projects">
+    <h2>Recent Projects</h2>
+    <div class="carousel" id="carousel">
+      <div class="slide">
+        <img src="../images/1p_on_roof.jpg" />
+      </div>
+      <div class="slide">
+        <img src="../images/2p_working_indoor_2.jpg" />
+      </div>
+
+      <div class="slide">
+        <img src="../images/Screenshot_20250714_205043_WhatsApp.jpg" />
+      </div>
+      <div class="slide">
+        <img src="../images/far_1p_on_roof.jpg" />
+      </div>
+      <div class="slide">
+        <img src="../images/5p_group_work_photo.jpg" />
+      </div>
+      <div class=" slide">
+        <img src="../images/2ps_working_in.jpg" />
+      </div>
+      <div class="slide">
+        <img src="../images/20250719_174614.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Evergreen Group is dedicated to providing sustainable energy solutions.
+    </p>
+    <br>
+    <h2>Geographical Location</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.7084909794668!2d9.29938171935175!3d4.154204816986108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106131a2a3c3f9e7%3A0xd2c835ef85d75d9b!2sEvergreen%20Business%20Initiatives!5e0!3m2!1sen!2scm!4v1752413063304!5m2!1sen!2scm"
+        width="100%" height="400" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="contact-us" id="contact">
+    <h2>Contact Us</h2>
+    <form id="form">
+      <div class="field">
+        <label for="name"></label>
+        <input type="text" placeholder="Your Name" required />
+      </div>
+      <div class="field">
+        <label for="email"></label>
+        <input type="email" placeholder="Your Email" required />
+      </div>
+      <div class="field">
+        <label for="message"></label>
+        <input type="text" name="message" id="message">
+      </div>
+      <form action="?" method="POST">
+        <div class="g-recaptcha" data-sitekey="6Lebr44rAAAAAHCwU4VqvQQ2KqwJX12B5XfsPBSl"></div>
+        <br />
+        <input type="submit" value="Submit">
+      </form>
+      <textarea placeholder="Your Message" id="message"></textarea>
+      <button type="submit" id="button" value="Send Email">Send</button>
+
+    </form>
+
+    <footer class="footer">
+      <p>
+        © 2025 Evergreen Group. Website Made By
+        <a href="https://github.com/blazeonitch/" target="_blank" rel="noopener noreferrer">
+          Blaze </a>
+      </p>
+    </footer>
+
+    <script src="../js/app.js" defer></script>
+
+    <!-- EMAIL JS server side -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init('HqNmqYec1mnKewegC')
+    </script>
+</body>
+
+</html>
