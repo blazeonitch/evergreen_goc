@@ -13,6 +13,12 @@ body {
 	font-weight: 400;
 }
 
+.navbar img {
+	height: 50px;
+	width: 50px;
+	margin-left: 100px;
+}
+
 h1,
 h2,
 h3 {
@@ -325,4 +331,24 @@ button:focus-visible {
 .footer_section a:focus {
 	color: #fff;
 	outline: none;
+}
+
+
+.social-media {
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 10px;
+}
+
+.social-media a img {
+	width: 24px;
+	height: 24px;
+	filter: grayscale(100%);
+	transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.social-media a:hover img {
+	filter: none;
+	transform: scale(1.1);
 }
