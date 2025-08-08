@@ -1,4 +1,7 @@
-/* Reset & base */
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -6,7 +9,7 @@
 }
 
 body {
-	font-family: "Segoe UI", sans-serif;
+	font-family: "Roboto", "Segoe UI", sans-serif;
 	background: #f0f5f1;
 	color: #222;
 	line-height: 1.6;
@@ -27,7 +30,6 @@ h3 {
 	line-height: 1.2;
 }
 
-
 /* Navbar */
 .navbar {
 	background: #0f3d0f;
@@ -41,7 +43,6 @@ h3 {
 	z-index: 10;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
 
 .brand {
 	font-weight: bold;
@@ -137,7 +138,6 @@ h3 {
 	box-shadow: 0 8px 15px rgba(0, 61, 0, 0.3);
 	transform: translateY(-5px);
 }
-
 
 .carousel {
 	max-width: 90vw;
@@ -273,7 +273,7 @@ button:focus-visible {
 	.nav-links {
 		flex-direction: column;
 		position: absolute;
-		top: 60px;
+		top: 70px;
 		right: 0;
 		width: 100%;
 		background-color: #0f3d0f;
@@ -281,7 +281,9 @@ button:focus-visible {
 		opacity: 0;
 		transform: translateX(-20px);
 		pointer-events: none;
-		transition: opacity 0.3s ease, transform 0.3s ease;
+		transition:
+			opacity 0.3s ease,
+			transform 0.3s ease;
 	}
 
 	.nav-links.show {
@@ -340,7 +342,6 @@ button:focus-visible {
 	outline: none;
 }
 
-
 .social-media {
 	justify-content: center;
 	align-items: center;
@@ -352,7 +353,9 @@ button:focus-visible {
 	width: 24px;
 	height: 24px;
 	filter: grayscale(100%);
-	transition: filter 0.3s ease, transform 0.2s ease;
+	transition:
+		filter 0.3s ease,
+		transform 0.2s ease;
 }
 
 .social-media a:hover img {
